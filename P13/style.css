@@ -5,15 +5,13 @@ body {
   background: #f1f3f5;
   color: #343a40;
 }
-
-/* GRID: overall page layout */
 .page {
   display: grid;
   grid-template-columns: 240px 1fr;
   grid-template-rows: auto 1fr auto;
   grid-template-areas:
     "header  header"
-    "sidebar content"
+  "sidebar content"
     "footer  footer";
   min-height: 100vh;
 }
@@ -22,8 +20,6 @@ body {
 .sidebar { grid-area: sidebar; }
 .content { grid-area: content; }
 .footer  { grid-area: footer; }
-
-/* FLEXBOX: navbar inside header */
 .header {
   display: flex;
   justify-content: space-between;
@@ -46,8 +42,6 @@ body {
 .content { padding: 2rem; }
 .content h2 { margin-bottom: 0.5rem; }
 .content p { margin-bottom: 1.5rem; line-height: 1.6; }
-
-/* FLEXBOX: row of cards */
 .cards {
   display: flex;
   flex-wrap: wrap;
@@ -68,8 +62,6 @@ body {
   text-align: center;
   padding: 1rem;
 }
-
-/* Mobile: Grid becomes one column */
 @media (max-width: 700px) {
   .page {
     grid-template-columns: 1fr;
