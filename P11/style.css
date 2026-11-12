@@ -1,0 +1,78 @@
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: Georgia, serif;
+  background: #e9e4d4;
+  color: #222;
+}
+
+.newspaper {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;   /* 3 columns */
+  grid-template-areas:
+    "masthead masthead masthead"
+    "left     main     right"
+    "footer   footer   footer";
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 1.5rem auto;
+  padding: 1.5rem;
+  background: #fbf8ee;
+  border: 2px solid #222;
+}
+
+.masthead {
+  grid-area: masthead;
+  text-align: center;
+  border-bottom: 4px double #222;
+  padding-bottom: 1rem;
+}
+.masthead h1 { font-size: 3rem; letter-spacing: 2px; }
+
+.left { grid-area: left; }
+.main-story { grid-area: main; }
+.right { grid-area: right; }
+
+.left, .right {
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.left h2, .right h2 {
+  font-size: 1.1rem;
+  border-bottom: 1px solid #222;
+  margin-bottom: 0.5rem;
+}
+.left p, .right p { margin-bottom: 0.8rem; }
+
+/* vertical lines between columns */
+.main-story {
+  border-left: 1px solid #222;
+  border-right: 1px solid #222;
+  padding: 0 1.5rem;
+}
+.main-story h2 { font-size: 1.8rem; margin-bottom: 0.3rem; }
+.byline { font-style: italic; margin-bottom: 1rem; color: #555; }
+.main-story p { line-height: 1.6; margin-bottom: 1rem; }
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  border-top: 2px solid #222;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+/* Mobile: one column */
+@media (max-width: 700px) {
+  .newspaper {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "masthead"
+      "main"
+      "left"
+      "right"
+      "footer";
+  }
+  .main-story { border: none; padding: 0; }
+  .masthead h1 { font-size: 2rem; }
+}
