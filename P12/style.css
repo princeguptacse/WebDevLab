@@ -13,7 +13,7 @@ body {
   color: white;
 }
 
-/* Advanced grid */
+
 .projects {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -37,7 +37,7 @@ body {
 .project p { margin-bottom: 1rem; line-height: 1.5; }
 .project a { color: #3b5bdb; text-decoration: none; font-weight: bold; }
 
-/* Featured card: 2 columns and 2 rows */
+
 .featured {
   grid-column: span 2;
   grid-row: span 2;
@@ -46,10 +46,10 @@ body {
 }
 .featured a { color: #ffd43b; }
 
-/* Wide card */
+
 .wide { grid-column: span 2; }
 
-/* Mobile: no spanning */
+
 @media (max-width: 600px) {
   .featured, .wide { grid-column: auto; grid-row: auto; }
 }
