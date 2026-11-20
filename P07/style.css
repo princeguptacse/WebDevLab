@@ -1,0 +1,97 @@
+
+:root {
+  --primary-color: #2563eb;
+  --accent-color: #38bdf8;
+  --dark-color: #1e293b;
+  --text-color: #334155;
+  --background-color: #f8fafc;
+  --font-size: 16px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: var(--font-size);
+  line-height: 1.6;
+  color: var(--text-color);
+  background: var(--background-color);
+}
+
+.site-header {
+  background: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 35px;
+}
+
+.subtitle {
+  color: #cbd5e1;
+}
+
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.section {
+  background: white;
+  padding: 25px;
+  margin-bottom: 25px;
+  border-radius: 10px;
+}
+
+h2, h3 {
+  color: var(--dark-color);
+  margin-bottom: 12px;
+}
+
+p {
+  margin-bottom: 12px;
+}
+
+.small-text {
+  font-size: 13px;
+  color: #64748b;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--primary-color);
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+.swatch {
+  display: inline-block;
+  padding: 20px;
+  margin: 8px;
+  color: white;
+  border-radius: 8px;
+}
+
+.swatch-primary {
+  background: var(--primary-color);
+}
+
+.swatch-accent {
+  background: var(--accent-color);
+}
+
+.swatch-dark {
+  background: var(--dark-color);
+}
+
+.site-footer {
+  background: var(--dark-color);
+  color: white;
+  text-align: center;
+  padding: 18px;
+}
